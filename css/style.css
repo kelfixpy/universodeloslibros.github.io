@@ -1,0 +1,364 @@
+body {
+    margin: 0;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    transition: 0.3s;
+}
+
+header {
+    height: 15vh;
+    background-color: #e9e0d2;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.titulo {
+    text-align: center;
+    /* centra el texto horizontalmente */
+}
+
+main {
+    height: 70vh;
+    overflow: auto;
+    padding: 20px;
+    background-color: rgb(221, 213, 206);
+
+}
+
+footer {
+
+    height: 12vh;
+    background-color: #e9e0d2;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    
+    gap: 20px;
+    /* espacio entre cada elemento */
+
+}
+
+.footer-a{
+    text-decoration: none;
+}
+
+/*modo oscuro */
+.dark {
+    margin: 0;
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+
+}
+
+.dark header {
+    height: 15vh;
+    background-color: #071018;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.dark footer {
+    height: 15vh;
+    background-color: #071018;
+    color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+}
+
+.dark main {
+    height: 70vh;
+    overflow: auto;
+    padding: 20px;
+    background-color: #5E6D88;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.card {
+    background-color: rgb(201, 188, 163);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 2px 6px rgb(0, 0, 0, 0.2);
+    border: 2px solid transparent;
+    /* sin borde visible por defecto */
+
+
+}
+
+.card:hover {
+    border: 2px solid black;
+    /* aparece el borde negro al pasar el mouse */
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card img:hover {
+    transform: scale(1.05);
+}
+
+.logo {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    z-index: 1000;
+}
+
+.card h3 {
+    color: rgb(17, 17, 17);
+}
+
+.card h2 {
+    color: rgb(0, 0, 0);
+    padding: 10px;
+
+}
+
+.card button {
+    width: 100%;
+    height: 5%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: #d4c7b9;
+    color: black;
+    border-color: rgb(216, 192, 162);
+}
+
+/*estilo para la modal*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    /*posicioa la ventana modal en los 4 lado*/
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content p {
+
+    color: white;
+
+
+}
+
+.modal-imagen {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-imagen img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    animation: zoom 0.3s ease;
+}
+
+.cerrar {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    font-size: 45px;
+    color: white;
+    cursor: pointer;
+}
+
+.modo {
+    position: fixed;
+    /* se mantiene fijo aunque hagas scroll */
+    top: 20px;
+    /* distancia desde arriba */
+    right: 20px;
+    /* distancia desde la derecha */
+    padding: 10px 20px;
+    background-color: #d1cbbf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+/*imagenes en carrusel*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* Contenedor principal del carrusel - ANCHO COMPLETO */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    /* Ocupa todo el ancho */
+    height: 100vh;
+    /* 60% de la altura de la pantalla */
+    max-height: 520px;
+    /* Altura máxima */
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    
+}
+
+/* Ocultar los inputs de radio */
+input[type="radio"] {
+    display: none;
+}
+
+/* Contenedor de las diapositivas */
+.carousel-slides {
+    display: flex;
+    width: 400%;
+    /* 4 imágenes = 400% */
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    
+}
+
+/* Cada diapositiva */
+.carousel-item {
+    width: 25%;
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 99.9%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Movimiento según el radio seleccionado */
+#slide-1:checked~.carousel-slides {
+    transform: translateX(0%);
+}
+
+#slide-2:checked~.carousel-slides {
+    transform: translateX(-25%);
+}
+
+#slide-3:checked~.carousel-slides {
+    transform: translateX(-50%);
+}
+
+#slide-4:checked~.carousel-slides {
+    transform: translateX(-75%);
+}
+
+
+/* Puntos de navegación */
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.dot:hover {
+    transform: scale(1.2);
+}
+
+/* Punto activo */
+#slide-1:checked~.carousel-dots .dot:nth-child(1),
+#slide-2:checked~.carousel-dots .dot:nth-child(2),
+#slide-3:checked~.carousel-dots .dot:nth-child(3),
+#slide-4:checked~.carousel-dots .dot:nth-child(4) {
+    background-color: #635f5f;
+    transform: scale(1.2);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+.contenido-header {
+    display: flex;              /* Activa Flexbox */
+    flex-direction: row;       /* Elementos en fila (uno al lado del otro) */
+    justify-content: center;    /* Centra los elementos horizontalmente */
+    align-items: center;        /* Alinea verticalmente */
+    gap: 20px;                  /* Espacio pequeño entre cada elemento */
+    padding: 15px;
+}
+
+/* Estilos para todos los enlaces dentro de .contenido-header */
+.contenido-header a {
+    text-decoration: none;      /* Elimina el subrayado */
+    color: #070707;                /* Color del texto */
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.contenido-header a:hover {
+    transform: translateY(-3px); /* Se mueve ligeramente hacia arriba */
+    opacity: 0.8;
+}
+
+/* Estilo para el icono de WhatsApp */
+.contenido-header a[href*="wa.me"] img {
+    width: 22px;
+    height: auto;
+}
+
+/* Estilo para el icono de Instagram */
+.contenido-header a[href*="instagram"] img {
+    width: 22px;
+    height: auto;
+}
+
+/* Estilo específico para el correo */
+.contenido-header a[href="correo.html"] {
+    font-weight: bold;
+    color: #737070;             /* Color azul (puedes cambiarlo) */
+}
+
+/* Estilo específico para "Desarrolladora" */
+.contenido-header a[href="desarrolladora.html"] {
+    font-weight: bold;
+    color: #737070;            /* Color verde (puedes cambiarlo) */
+}

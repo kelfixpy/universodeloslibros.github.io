@@ -1,0 +1,279 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding: 0;
+  margin: 0;
+  padding-top: 80px;
+  /*Se crea un main flexible con todos sus elementos en el centro*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header {
+  height: 15vh;
+  background-color: #e9e0d2;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+}
+
+.contenido-header {
+  display: flex;
+  /* Activa Flexbox */
+  flex-direction: row;
+  /* Elementos en fila (uno al lado del otro) */
+  justify-content: center;
+  /* Centra los elementos horizontalmente */
+  align-items: center;
+  /* Alinea verticalmente */
+  gap: 20px;
+  /* Espacio pequeño entre cada elemento */
+  padding: 15px;
+}
+
+/* Estilos para todos los enlaces dentro de .contenido-header */
+.contenido-header a {
+  text-decoration: none;
+  /* Elimina el subrayado */
+  color: #070707;
+  /* Color del texto */
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.contenido-header a:hover {
+  transform: translateY(-3px);
+  /* Se mueve ligeramente hacia arriba */
+  opacity: 0.8;
+}
+
+.titulo {
+  text-align: center;
+  /* centra el texto horizontalmente */
+}
+
+footer {
+  height: 12vh;
+  width: 100%;
+  background-color: #e9e0d2;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  gap: 20px;
+  /* espacio entre cada elemento */
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+#text3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#text3 h1 {
+  color: black;
+
+}
+
+form {
+  background-color: white;
+  padding: 50px 55px;
+  box-shadow: 0 0 20px rgba(166, 159, 132, 0.2);
+  /*estilo para el contenedor form*/
+  border-radius: 20px;
+  text-align: center;
+  width: 50vw;
+  flex-wrap: wrap;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.input-group h1 {
+  color: black;
+  font-size: 20px;
+}
+
+main {
+  padding: 0;
+  margin: 0;
+  padding-top: 80px;
+  /*Se crea un main flexible con todos sus elementos en el centro*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+form {
+  background-color: white;
+  padding: 50px 55px;
+  box-shadow: 0 0 20px rgba(176, 163, 142, 0.2);
+  /*estilo para el contenedor form*/
+  border-radius: 20px;
+  text-align: center;
+  width: 50vw;
+  flex-wrap: wrap;
+}
+
+.input-group {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  text-align: left;
+}
+
+.input-group input {
+  height: 30px;
+  border-radius: 12px;
+  background-color: #ead9b8;
+  border: none;
+  padding: 5px;
+}
+
+#contactar {
+  height: 40px;
+  border-radius: 12px;
+  background-color: #ead9b8;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.input-group h1 {
+  color: black;
+  font-size: 20px;
+  border: 0;
+  color: white;
+}
+
+.btn {
+  font-size: 20px;
+  height: 50px;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  /*fuente mas linda buscar*/
+  color: black;
+  background-color: #fff;
+}
+
+.input-group .btn:hover {
+  transition: 0.3s all;
+  background-color: black;
+  color: white;
+}
+
+.rda {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  gap: 5px;
+}
+
+.rda label {
+  align-content: center;
+}
+
+.chk {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  gap: 5px;
+  justify-content: center;
+}
+
+.chk label {
+  align-content: center;
+}
+
+#message {
+  border-radius: 10px;
+  background-color: #ead9b8;
+  color: black;
+  font-size: 15px;
+}
+
+/*-----------------------------------------MODAL-----------------------------------------*/
+.modal {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, .8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal_content {
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  position: relative;
+  margin: 2rem;
+  width: 20rem;
+}
+
+.modal_content img {
+  height: 100px;
+}
+
+.modal_content h2 {
+  font-size: 1.3rem;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.modal_content button {
+  position: absolute;
+  bottom: 5px;
+  left: 78%;
+  padding: 5px 10px;
+  font-size: 15px;
+  background-color: #fff;
+}
+
+.modal_content button:hover {
+  background-color: #ead9b8;
+}
+
+.logo {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Estilo específico para "Desarrolladora" */
+.contenido-header a[href="desarrolladora.html"] {
+  font-weight: bold;
+  color: #737070;
+  /* Color verde (puedes cambiarlo) */
+}
+
+/* Estilo específico para "Inicio" */
+.contenido-header a[href="index.html"] {
+  font-weight: bold;
+  color: #737070;
+  /* Color verde (puedes cambiarlo) */
+}

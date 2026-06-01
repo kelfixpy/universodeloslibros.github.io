@@ -1,0 +1,155 @@
+/* Reset básico y fuentes */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    height: 15vh;
+    background-color: #e9e0d2;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.titulo {
+    text-align: center;
+    /* centra el texto horizontalmente */
+}
+
+footer {
+
+    height: 12vh;
+    background-color: #e9e0d2;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    
+    gap: 20px;
+    /* espacio entre cada elemento */
+}
+/* Contenedor principal */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* --- ESTILO PARA LA IMAGEN CHICA (Thumbnail) --- */
+main img {
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    max-width: 400px; /* ¡Aquí控制amos que no sea muy grande! Ponlo en 300px o 500px según prefieras */
+    height: auto; /* Mantiene las proporciones */
+    display: block;
+    margin: 0 auto;
+    cursor: pointer; /* Cambia el cursor para indicar que se puede clickar */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+/* Efecto hover (opcional) */
+main img:hover {
+    transform: scale(1.02);
+}
+
+/* --- ESTILOS DEL MODAL (Ventana Emergente) --- */
+
+/* El fondo del modal (oculto por defecto) */
+.modal {
+    display: none; /* Importante: oculto al inicio */
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; /* Permite scroll si la imagen es muy alta */
+    background-color: rgba(0,0,0,0.9); /* Fondo negro semi-transparente */
+}
+
+/* Contenedor blanco de la imagen */
+.modal-content {
+    margin: 5% auto; /* Centrado vertical y horizontal */
+    display: block;
+    width: 80%;
+    max-width: 1000px; /* Ancho máximo en pantalla grande */
+    max-height: 90vh; /* Altura máxima para que no pase el borde de la pantalla */
+    object-fit: contain; /* Ajusta la imagen dentro del recuadro */
+}
+
+/* --- LA IMAGEN DENTRO DEL MODAL --- */
+#imgGrande {
+    width: 40%;
+    height: 40%;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+/* --- BOTÓN DE CERRAR (LA X) --- */
+.cerrar {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 1001;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.contenido-header {
+    display: flex;              /* Activa Flexbox */
+    flex-direction: row;       /* Elementos en fila (uno al lado del otro) */
+    justify-content: center;    /* Centra los elementos horizontalmente */
+    align-items: center;        /* Alinea verticalmente */
+    gap: 20px;                  /* Espacio pequeño entre cada elemento */
+    padding: 15px;
+}
+
+.contenido-header a {
+    text-decoration: none;      /* Elimina el subrayado */
+    color: #070707;                /* Color del texto */
+    font-size: 18px;
+    cursor: pointer;
+    gap: 20px;
+}
+
+/* Estilo específico para el correo */
+.contenido-header a[href="correo.html"] {
+    font-weight: bold;
+    color: #737070;             /* Color azul (puedes cambiarlo) */
+}
+
+/* Estilo específico para "Inicio" */
+.contenido-header a[href="index.html"] {
+  font-weight: bold;
+  color: #737070;
+  /* Color verde (puedes cambiarlo) */
+}
+
+.logo {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    z-index: 1000;
+}
+
+.contenido-header a:hover {
+    transform: translateY(-3px); /* Se mueve ligeramente hacia arriba */
+    opacity: 0.8;
+}
